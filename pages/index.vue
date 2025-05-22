@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="hero-image neo-card">
-                <img src="/images/IMG_4643.png" alt="Jannik Fauser">
+                <img src="/images/profilepicture.png" alt="Jannik Fauser">
             </div>
         </section>
         <section id="projects" class="projects-section maxwidth">
