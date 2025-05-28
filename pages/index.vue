@@ -24,25 +24,25 @@
                 <ProjectCard title="FOCAL" 
                     subtitle="INVENTION DESIGN" 
                     image="/images/invention/invention_cover.png"
-                    url="/projects/invention"
+                    url="/subjects/invention"
                     description="Verlierst du beim Arbeiten am Laptop oft den Überblick über deine geöffneten Apps? Focal bringt Ordnung in dein digitales Arbeitsumfeld, indem Anwendungen räumlich anordnet werden können – direkt an den Wänden um dich herum." />
                     
                 <ProjectCard title="NERVOUS SYSTEM" 
                     subtitle="INTERACTIVE COMMUNICATION" 
                     image="/images/ics/ics_cover.png"
-                    url="/projects/iks" 
+                    url="/subjects/iks" 
                     description="An interactive exhibition piece that explores the connection between technology and human nervous systems." />
                     
                 <ProjectCard title="GARDENHELPER" 
                     subtitle="INTERFACE DESIGN" 
                     image="/images/interface/interface_cover.png"
-                    url="/projects/interface"
+                    url="/subjects/interface"
                     description="Exploring new ways of communication through innovative design concepts and strategies." />
                 
                 <ProjectCard title="PROGRAMMING" 
                     subtitle="ANIMAL JOURNEY" 
                     image="/images/programming/programming_cover.png"
-                    url="/projects/invention"
+                    url="/subjects/invention"
                     description="What if people could explore their favourite animals on an interactive Website?" />
             </div>
         </section>
