@@ -6,7 +6,7 @@
       </div>
       <nav class="neo-nav">
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-        <NuxtLink to="/projects/iks" class="nav-link">Projects</NuxtLink>
+        <NuxtLink to="/projects/invention" class="nav-link">Projects</NuxtLink>
         <NuxtLink to="/about" class="nav-link">How I Think</NuxtLink>
         <NuxtLink to="/contact" class="nav-link">Contact</NuxtLink>
       </nav>

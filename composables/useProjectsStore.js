@@ -10,6 +10,18 @@ const projectList = [
     id: 'iks',
     name: 'NERVOUS SYSTEM',
     url: '/projects/iks',
+    next: 'interface'
+  },
+  {
+    id: 'interface',
+    name: 'GARDENHELPER',
+    url: '/projects/interface',
+    next: 'programming'
+  },
+  {
+    id: 'programming',
+    name: 'ANIMAL JOURNEY',
+    url: '/projects/programming',
     next: null // Last project
   }
 ];

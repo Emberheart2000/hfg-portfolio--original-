@@ -22,7 +22,7 @@
           </div>
           <div class="info-item">
             <h3 class="teal-text">Tools</h3>
-            <p>Arduino, Processing, Sensors</p>
+            <p>Arduino IDE, 3D Printing, Beamer Projection</p>
           </div>
         </div>
         

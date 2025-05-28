@@ -33,10 +33,10 @@
                     url="/projects/iks" 
                     description="An interactive exhibition piece that explores the connection between technology and human nervous systems." />
                     
-                <ProjectCard title="INVENTION" 
+                <ProjectCard title="GARDENHELPER" 
                     subtitle="INTERFACE DESIGN" 
                     image="/images/interface/interface_cover.png"
-                    url="/projects/invention"
+                    url="/projects/interface"
                     description="Exploring new ways of communication through innovative design concepts and strategies." />
                 
                 <ProjectCard title="PROGRAMMING" 
