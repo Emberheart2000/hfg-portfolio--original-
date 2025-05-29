@@ -4,6 +4,10 @@
       <h1 class="neo-title">How I Think</h1>
       
       <div class="neo-container about-content">
+        <div class="process-image neo-card" style="margin-bottom: 2rem;">
+          <img src="/images/doublediamond.webp" alt="Double Diamond Design Process" style="width:100%; display:block; border-radius:0.75rem;">
+        </div>
+        <p class="text-[60%] teal-text">DOUBLE DIAMOND DESIGN PROCESS</p>
         <p>
           Design is an iterative process. The greatest ideas don't come from purely inventing things, it's about developing existing products in specific directions and to rethink if they still match their purpose from time to time.
         </p>
@@ -18,7 +22,7 @@
           <!-- <img src="/images/IMG_4643.JPG" alt="Jannik Fauser"> -->
         </div>
         
-        <h2 class="neo-subtitle">My Approach</h2>
+        <h2 class="neo-subtitle teal-text">My Approach</h2>
         <p>
           I believe in understanding problems deeply before jumping to solutions. This means spending time with users, observing their behaviors, and mapping out the entire experience journey. Only then can we create solutions that truly resonate.
         </p>

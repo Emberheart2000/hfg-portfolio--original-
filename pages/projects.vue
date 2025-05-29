@@ -7,7 +7,7 @@
 
       <div class="projects-grid">
         <!-- Focal Project -->
-        <NuxtLink to="/projects" class="project-card neo-card">
+        <NuxtLink to="/subjects/invention" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
                :style="{ backgroundImage: `url(/images/invention/invention_cover.png)` }">
@@ -28,7 +28,7 @@
         </NuxtLink>
 
         <!-- GardenHelper Project -->
-        <NuxtLink to="/projects" class="project-card neo-card">
+        <NuxtLink to="/subjects/interface" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
                :style="{ backgroundImage: `url(/images/gardenhelper/gardenhelper_cover.png)` }">
@@ -49,7 +49,7 @@
         </NuxtLink>
 
         <!-- Animals Website Project -->
-        <NuxtLink to="/projects" class="project-card neo-card">
+        <NuxtLink to="/subjects/programming" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
                :style="{ backgroundImage: `url(/images/animals/animals_cover.png)` }">
@@ -70,7 +70,7 @@
         </NuxtLink>
 
         <!-- ICS Project -->
-        <NuxtLink to="/projects" class="project-card neo-card">
+        <NuxtLink to="/subjects/ics" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
                :style="{ backgroundImage: `url(/images/ics/ics_cover.png)` }">
@@ -124,6 +124,7 @@
   font-weight: 700;
   color: var(--neo-text-color);
   margin: 0;
+  text-align: left;
   text-shadow: 
     2px 2px 4px var(--neo-shadow-dark),
     -2px -2px 4px var(--neo-shadow-light);

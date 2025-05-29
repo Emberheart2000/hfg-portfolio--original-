@@ -13,7 +13,7 @@
               <div class="contact-icon">📧</div>
               <div class="contact-text">
                 <h3 class="teal-text">Email</h3>
-                <p>jannik.fauser@hfg.design</p>
+                <p>hello@jannikfauser.com</p>
               </div>
             </div>
             
@@ -56,7 +56,7 @@
             <div class="success-icon">✓</div>
             <h3>Email Client Opened</h3>
             <p>{{ formMessage }}</p>
-            <p class="small-text">If your email client didn't open automatically, please check your browser settings or copy the message and send it manually to jannik.fauser@hfg.design</p>
+            <p class="small-text">If your email client didn't open automatically, please check your browser settings or copy the message and send it manually to hello@jannikfauser.com</p>
             <button @click="resetForm" class="neo-button">Send Another Message</button>
           </div>
           
@@ -198,7 +198,7 @@ ${formData.message}
 Sent from Portfolio Contact Form`;
     
     // Create mailto link with encoded parameters
-    const mailtoLink = `mailto:jannik.fauser@hfg.design?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:hello@jannikfauser.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open the mailto link
     window.location.href = mailtoLink;

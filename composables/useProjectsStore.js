@@ -22,6 +22,12 @@ const projectList = [
     id: 'programming',
     name: 'ANIMAL JOURNEY',
     url: '/projects/programming',
+    next: 'dataset'
+  },
+  {
+    id: 'dataset',
+    name: 'TORNADO OCCURRENCES',
+    url: '/projects/dataset',
     next: null // Last project
   }
 ];

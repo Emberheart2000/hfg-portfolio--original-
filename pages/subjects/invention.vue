@@ -27,6 +27,7 @@
           <div class="info-item">
             <h3 class="teal-text">Team</h3>
             <div>
+              <GroupMemberTag group-link="https://www.linkedin.com/in/jannik-fauser/" label="Jannik" />
               <GroupMemberTag group-link="https://timon.design" label="Timon" />
               <GroupMemberTag group-link="https://www.linkedin.com/in/eric-hochstatter-91b368358/" label="Eric" />
             </div>

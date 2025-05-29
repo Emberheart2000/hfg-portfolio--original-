@@ -7,7 +7,7 @@
       </div>
       
       <div class="project-hero neo-card">
-        <img src="/images/ics/ics_cover.png" alt="ICS Project">
+        <img src="/images/ics/ics_cover2.png" alt="ICS Project">
       </div>
       
       <div class="project-content neo-container">

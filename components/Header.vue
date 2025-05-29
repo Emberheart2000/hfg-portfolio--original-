@@ -1,9 +1,9 @@
 <template>
   <header :class="['neo-header', { 'header-hidden': isHeaderHidden }]">
     <div class="header-container maxwidth">
-      <div class="logo">
-        <NuxtLink to="/">JF</NuxtLink>
-      </div>
+      <NuxtLink to="/" class="logo-link neo-button">
+        <img src="/logo_rlysmall.png" href="/" alt="Logo" style="height: 30px;" />
+      </NuxtLink>
       <nav class="neo-nav">
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
         <NuxtLink to="/projects" class="nav-link">Projects</NuxtLink>
