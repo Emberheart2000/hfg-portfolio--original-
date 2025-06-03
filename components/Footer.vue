@@ -3,7 +3,7 @@
     <div class="maxwidth footer-content">
       <div class="footer-links">
         <NuxtLink to="/" class="footer-link">Home</NuxtLink>
-        <NuxtLink to="/projects" class="footer-link">Projects</NuxtLink>
+        <NuxtLink to="/projects/ics" class="footer-link">Projects</NuxtLink>
         <NuxtLink to="/about" class="footer-link">How I Think</NuxtLink>
         <NuxtLink to="/contact" class="footer-link">Contact</NuxtLink>
         <NuxtLink to="/legalNotice" class="footer-link">Legal Notice</NuxtLink>
