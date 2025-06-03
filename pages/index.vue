@@ -268,7 +268,7 @@
                                     <span>Three.js</span>
                                 </div>
                                 <div class="skill-item">
-                                    <img src="/icons/vue_logo.svg" alt="Vue.js" class="brand-logo">
+                                    <img src="/icons/framework_logo.svg" alt="Vue.js" class="brand-logo">
                                     <span>Vue.js</span>
                                 </div>
                                 <div class="skill-item">
