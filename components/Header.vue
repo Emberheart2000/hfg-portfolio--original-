@@ -1,7 +1,7 @@
 <template>
   <header :class="['neo-header', { 'header-hidden': isHeaderHidden }]">
     <div class="header-container maxwidth">
-      <NuxtLink to="/" class="logo-link neo-button">
+      <NuxtLink id="logo" to="/" class="logo-link neo-button">
         <img src="/logo_rlysmall.png" href="/" alt="Logo" style="height: 30px;" />
       </NuxtLink>
       <nav class="neo-nav">
@@ -122,6 +122,18 @@ onUnmounted(() => {
   .neo-nav {
     width: 100%;
     justify-content: space-between;
+  }
+  #logo {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--neo-text-color);
+    background-color: var(--neo-bg-color);
+    border-radius: 0.8rem;
+    text-decoration: none;
+    box-shadow: 0,0, 0 rgba(0,0,0,0);
+    transition: 0;
   }
 }
 </style>

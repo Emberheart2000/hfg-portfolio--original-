@@ -6,6 +6,26 @@
       </div>
 
       <div class="projects-grid">
+        <NuxtLink to="/subjects/invention" class="project-card neo-card">
+          <div class="project-background" :style="{ backgroundImage: `url(/images/invention/invention_cover.png)` }"></div>
+          <div class="project-content">
+            <p class="project-description">
+              <span class="description-text">
+                ...we could <strong class="highlight-text">organize our digital chaos</strong> 
+                in three-dimensional space around us?
+              </span>
+            </p>
+            <div class="project-meta">
+              <span class="project-type">Mixed Reality</span>
+              <span class="project-year">2024-2025</span>
+            </div>
+          </div>
+          <div class="project-hover-overlay">
+            <span class="project-name">Focal</span>
+            <div class="arrow-icon">→</div>
+          </div>
+        </NuxtLink>
+
         <!-- Focal Project -->
         <NuxtLink to="/subjects/invention" class="project-card neo-card">
           <div class="project-content">
@@ -348,3 +368,9 @@
   }
 }
 </style>
+
+
+
+
+
+

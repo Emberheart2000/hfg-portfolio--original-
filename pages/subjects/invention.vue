@@ -22,7 +22,7 @@
           </div>
           <div class="info-item">
             <h3 class="teal-text">Tools</h3>
-            <p>Miro, Figma, After Effects, Protopie</p>
+            <p>Miro, Figma, After Effects, Protopie, Apple Vision Pro</p>
           </div>
           <div class="info-item">
             <h3 class="teal-text">Team</h3>
@@ -37,24 +37,23 @@
         <div class="project-description">
           <h2 class="section-title teal-accent">Project Overview</h2>
           <p>
-            Verlierst du beim Arbeiten am Laptop oft den Überblick über deine geöffneten Apps? Focal bringt Ordnung in
-            dein digitales Arbeitsumfeld, indem Anwendungen räumlich anordnet werden können – direkt an den Wänden um
-            dich herum.
+            Do you often lose track of your open apps while working on your laptop? Focal brings order to
+            your digital workspace by allowing applications to be spatially arranged – directly on the walls
+            around you.
           </p>
 
           <p>
-            Mit verschiedenen Gesten kannst du Apps zu dir ziehen und so nahtlos zwischen drei verschiedenen
-            Informationsstufen wechseln. So entsteht eine neue, strukturierte Art des digitalen Arbeitens, die sich an
-            deine Bedürfnisse anpasst.
+            With various gestures, you can pull apps towards you and seamlessly switch between three different
+            information levels. This creates a new, structured way of digital working that adapts to your needs.
           </p>
 
           <div class="neo-separator"></div>
 
           <h2 class="section-title teal-accent">The Problem</h2>
           <p>
-            In der heutigen digitalen Arbeitswelt sind wir ständig von zahlreichen geöffneten Anwendungen umgeben.
-            Traditionelle Betriebssysteme bieten nur begrenzte Möglichkeiten zur Organisation dieser Anwendungen, was zu
-            Überlastung und verminderter Produktivität führen kann.
+            In today's digital work environment, we are constantly surrounded by numerous open applications.
+            Traditional operating systems offer only limited possibilities for organizing these applications, which can
+            lead to overwhelm and reduced productivity.
           </p>
 
           <div class="project-gallery">
@@ -70,27 +69,26 @@
 
           <h2 class="section-title teal-accent">The Solution</h2>
           <p>
-            Focal nutzt Mixed Reality, um digitalen Arbeitsbereichen eine räumliche Dimension zu verleihen. Anwendungen
-            können um den Benutzer herum positioniert werden, wobei drei Informationsebenen eine intuitive Organisation
-            ermöglichen:
+            Focal uses Mixed Reality to give digital workspaces a spatial dimension. Applications
+            can be positioned around the user, with three information levels enabling intuitive organization:
           </p>
 
           <ul class="solution-list">
             <li>
-              <strong class="teal-text">Periphere Ebene:</strong> Weniger wichtige Apps bleiben im Blickfeld, ohne
-              abzulenken
+              <strong class="teal-text">Peripheral Level:</strong> Less important apps remain in view without
+              being distracting
             </li>
             <li>
-              <strong class="teal-text">Fokusebene:</strong> Aktiv genutzte Apps werden in optimaler Position platziert
+              <strong class="teal-text">Focus Level:</strong> Actively used apps are placed in optimal position
             </li>
             <li>
-              <strong class="teal-text">Detailebene:</strong> Ermöglicht tiefe Interaktion mit einer einzelnen Anwendung
+              <strong class="teal-text">Detail Level:</strong> Enables deep interaction with a single application
             </li>
           </ul>
 
           <p>
-            Durch intuitive Gesten können Benutzer mühelos zwischen diesen Ebenen wechseln und so ihre Aufmerksamkeit
-            gezielt steuern.
+            Through intuitive gestures, users can effortlessly switch between these levels and thus
+            control their attention in a targeted manner.
           </p>
         </div>
       </div>

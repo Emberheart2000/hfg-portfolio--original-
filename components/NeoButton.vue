@@ -1,6 +1,6 @@
 <template>
   <component 
-    :is="tag"
+    :is="componentTag"
     :to="to"
     :href="href"
     :type="type"
@@ -10,7 +10,9 @@
     @click="handleClick"
   >
     <slot name="icon-left" />
-    <slot />
+    <span v-if="$slots.default" class="button-text">
+      <slot />
+    </span>
     <slot name="icon-right" />
   </component>
 </template>
@@ -19,83 +21,87 @@
 import { computed } from 'vue'
 
 interface Props {
-  // Variants
-  variant?: 'default' | 'outline' | 'accent' | 'accent-subtle' | 'accent-gradient'
+  // Variants from your existing designs
+  variant?: 'default' | 'outline' | 'accent' | 'pill' | 'minimal'
   size?: 'small' | 'default' | 'large'
   
-  // Layout
+  // Layout options
   fullWidth?: boolean
   iconOnly?: boolean
   
-  // Element type
-  tag?: 'button' | 'NuxtLink' | 'a'
-  to?: string
-  href?: string
+  // Element type determination
+  to?: string          // NuxtLink
+  href?: string        // External link
   type?: 'button' | 'submit' | 'reset'
   
   // States
   disabled?: boolean
+  loading?: boolean
   
-  // Additional classes
+  // Custom styling
   class?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   variant: 'default',
   size: 'default',
-  tag: 'button',
   type: 'button',
   fullWidth: false,
   iconOnly: false,
-  disabled: false
+  disabled: false,
+  loading: false
 })
 
 const emit = defineEmits<{
   click: [event: Event]
 }>()
 
-// Determine the component tag
-const tag = computed(() => {
+// Auto-determine component type
+const componentTag = computed(() => {
   if (props.to) return 'NuxtLink'
   if (props.href) return 'a'
-  return props.tag
+  return 'button'
 })
 
-// Generate button classes
+// Generate all button classes
 const buttonClasses = computed(() => {
   const classes = ['neo-button']
   
-  // Variant
+  // Add variant
   if (props.variant !== 'default') {
     classes.push(props.variant)
   }
   
-  // Size
+  // Add size
   if (props.size !== 'default') {
     classes.push(props.size)
   }
   
-  // Layout modifiers
+  // Add modifiers
   if (props.fullWidth) classes.push('full-width')
   if (props.iconOnly) classes.push('icon-only')
+  if (props.loading) classes.push('loading')
   
-  // Custom classes
+  // Add custom class
   if (props.class) classes.push(props.class)
   
   return classes.join(' ')
 })
 
 const handleClick = (event: Event) => {
-  if (!props.disabled) {
+  if (!props.disabled && !props.loading) {
     emit('click', event)
   }
 }
 </script>
 
 <style scoped>
-/* Base Neo Button Styles */
+/* Base Neo Button - Default neomorphic style */
 .neo-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.8rem 1.5rem;
   font-weight: 600;
   font-size: 1rem;
@@ -106,40 +112,52 @@ const handleClick = (event: Event) => {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  /* Default neomorphic shadow */
   box-shadow: 
     8px 8px 16px var(--neo-shadow-dark), 
     -8px -8px 16px var(--neo-shadow-light);
 }
 
-.neo-button:hover {
+.neo-button:hover:not(:disabled):not(.loading) {
   transform: translateY(-3px);
   box-shadow: 
     10px 10px 20px var(--neo-shadow-dark), 
     -10px -10px 20px var(--neo-shadow-light);
 }
 
-.neo-button:active {
+.neo-button:active:not(:disabled):not(.loading) {
   transform: translateY(0);
   box-shadow: 
     inset 5px 5px 10px var(--neo-shadow-dark), 
     inset -5px -5px 10px var(--neo-shadow-light);
 }
 
-/* Outline Variant */
+.neo-button:focus {
+  outline: none;
+  box-shadow: 
+    8px 8px 16px var(--neo-shadow-dark), 
+    -8px -8px 16px var(--neo-shadow-light),
+    0 0 0 3px rgba(0, 188, 204, 0.3);
+}
+
+/* Outline Variant - Your existing outline style */
 .neo-button.outline {
   background-color: transparent;
   box-shadow: none;
   border: 2px solid var(--neo-shadow-dark);
 }
 
-.neo-button.outline:hover {
+.neo-button.outline:hover:not(:disabled) {
   background-color: var(--neo-bg-color);
   box-shadow: 
     5px 5px 10px var(--neo-shadow-dark), 
     -5px -5px 10px var(--neo-shadow-light);
 }
 
-/* Accent Variants */
+/* NEW - Accent Variant with neo accent color background */
 .neo-button.accent {
   color: white;
   background-color: var(--neo-accent-color);
@@ -150,8 +168,9 @@ const handleClick = (event: Event) => {
     inset -2px -2px 4px rgba(0, 188, 204, 0.2);
 }
 
-.neo-button.accent:hover {
+.neo-button.accent:hover:not(:disabled) {
   background-color: #00a8cc;
+  transform: translateY(-3px);
   box-shadow: 
     12px 12px 24px rgba(0, 188, 204, 0.4), 
     -12px -12px 24px rgba(255, 255, 255, 0.9),
@@ -159,7 +178,8 @@ const handleClick = (event: Event) => {
     inset -3px -3px 6px rgba(0, 168, 204, 0.3);
 }
 
-.neo-button.accent:active {
+.neo-button.accent:active:not(:disabled) {
+  transform: translateY(-1px);
   background-color: #0099b8;
   box-shadow: 
     inset 8px 8px 16px rgba(0, 168, 204, 0.4), 
@@ -167,38 +187,25 @@ const handleClick = (event: Event) => {
     4px 4px 8px rgba(0, 188, 204, 0.2);
 }
 
-.neo-button.accent-subtle {
-  color: white;
-  background-color: var(--neo-accent-color);
-  box-shadow: 
-    4px 4px 8px rgba(0, 188, 204, 0.25), 
-    -4px -4px 8px rgba(255, 255, 255, 0.6),
-    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+/* Pill Variant - Rounded pill shape */
+.neo-button.pill {
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
 }
 
-.neo-button.accent-subtle:hover {
-  background-color: #00a8cc;
+/* Minimal Variant - Subtle, flat style */
+.neo-button.minimal {
+  background-color: var(--neo-bg-color);
   box-shadow: 
-    6px 6px 12px rgba(0, 188, 204, 0.3), 
-    -6px -6px 12px rgba(255, 255, 255, 0.7),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+    4px 4px 8px var(--neo-shadow-dark), 
+    -4px -4px 8px var(--neo-shadow-light);
 }
 
-.neo-button.accent-gradient {
-  color: white;
-  background: linear-gradient(135deg, var(--neo-accent-color), #00a8cc);
+.neo-button.minimal:hover:not(:disabled) {
+  transform: translateY(-1px);
   box-shadow: 
-    8px 8px 16px rgba(0, 188, 204, 0.3), 
-    -8px -8px 16px rgba(255, 255, 255, 0.8),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.2);
-}
-
-.neo-button.accent-gradient:hover {
-  background: linear-gradient(135deg, #00a8cc, #0099b8);
-  box-shadow: 
-    12px 12px 24px rgba(0, 188, 204, 0.4), 
-    -12px -12px 24px rgba(255, 255, 255, 0.9),
-    inset 3px 3px 6px rgba(255, 255, 255, 0.3);
+    6px 6px 12px var(--neo-shadow-dark), 
+    -6px -6px 12px var(--neo-shadow-light);
 }
 
 /* Size Variants */
@@ -212,47 +219,81 @@ const handleClick = (event: Event) => {
   font-size: 1.1rem;
 }
 
-/* Layout Variants */
+/* Layout Modifiers */
 .neo-button.full-width {
   width: 100%;
-  text-align: center;
 }
 
 .neo-button.icon-only {
   padding: 0.8rem;
   min-width: 3rem;
   min-height: 3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Disabled State */
+.neo-button.icon-only.small {
+  padding: 0.6rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.neo-button.icon-only.large {
+  padding: 1rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+}
+
+/* States */
 .neo-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
+  transform: none !important;
   background-color: #ccc;
+  color: #888;
   box-shadow: 
     4px 4px 8px rgba(0, 0, 0, 0.1), 
-    -4px -4px 8px rgba(255, 255, 255, 0.3);
+    -4px -4px 8px rgba(255, 255, 255, 0.3) !important;
 }
 
-.neo-button:disabled:hover {
-  transform: none;
+.neo-button.accent:disabled {
   background-color: #ccc;
+  color: #888;
 }
 
-/* Focus States */
-.neo-button:focus {
-  outline: none;
-  box-shadow: 
-    8px 8px 16px var(--neo-shadow-dark), 
-    -8px -8px 16px var(--neo-shadow-light),
-    0 0 0 3px rgba(0, 188, 204, 0.3);
+/* Loading State */
+.neo-button.loading {
+  cursor: wait;
+  position: relative;
 }
 
-/* Responsive */
+.neo-button.loading .button-text {
+  opacity: 0.5;
+}
+
+.neo-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem 0 0 -0.5rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: button-spin 1s linear infinite;
+}
+
+@keyframes button-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Download button specific (for CV download) */
+.neo-button .download-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .neo-button {
     padding: 0.7rem 1.3rem;
@@ -262,6 +303,43 @@ const handleClick = (event: Event) => {
   .neo-button.small {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
+  }
+  
+  .neo-button.large {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neo-button.full-width {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .neo-button {
+    border: 2px solid var(--neo-text-color);
+  }
+  
+  .neo-button.accent {
+    border: 2px solid var(--neo-accent-color);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .neo-button {
+    transition: none;
+  }
+  
+  .neo-button:hover {
+    transform: none;
+  }
+  
+  .button-spin {
+    animation: none;
   }
 }
 </style>

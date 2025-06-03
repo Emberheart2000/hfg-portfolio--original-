@@ -3,31 +3,31 @@ const projectList = [
   {
     id: 'invention',
     name: 'FOCAL',
-    url: '/projects/invention',
+    url: '/subjects/invention',
     next: 'iks'
   },
   {
     id: 'iks',
     name: 'NERVOUS SYSTEM',
-    url: '/projects/iks',
+    url: '/subjects/iks',
     next: 'interface'
   },
   {
     id: 'interface',
     name: 'GARDENHELPER',
-    url: '/projects/interface',
+    url: '/subjects/interface',
     next: 'programming'
   },
   {
     id: 'programming',
     name: 'ANIMAL JOURNEY',
-    url: '/projects/programming',
+    url: '/subjects/programming',
     next: 'dataset'
   },
   {
     id: 'dataset',
     name: 'TORNADO OCCURRENCES',
-    url: '/projects/dataset',
+    url: '/subjects/dataset',
     next: null // Last project
   }
 ];
