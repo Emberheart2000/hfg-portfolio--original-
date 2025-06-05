@@ -58,10 +58,10 @@
 
           <div class="project-gallery">
             <div class="gallery-item neo-card">
-              <img src="/images/invention/invention_cover.png" alt="Process Image 1">
+              <img src="/images/invention/invention_drag.png" alt="Process Image 1">
             </div>
             <div class="gallery-item neo-card">
-              <img src="/images/invention/invention_cover.png" alt="Process Image 2">
+              <img src="/images/invention/invention_widget.png" alt="Process Image 2">
             </div>
           </div>
 

@@ -6,31 +6,11 @@
       </div>
 
       <div class="projects-grid">
-        <NuxtLink to="/subjects/invention" class="project-card neo-card">
-          <div class="project-background" :style="{ backgroundImage: `url(/images/invention/invention_cover.png)` }"></div>
-          <div class="project-content">
-            <p class="project-description">
-              <span class="description-text">
-                ...we could <strong class="highlight-text">organize our digital chaos</strong> 
-                in three-dimensional space around us?
-              </span>
-            </p>
-            <div class="project-meta">
-              <span class="project-type">Mixed Reality</span>
-              <span class="project-year">2024-2025</span>
-            </div>
-          </div>
-          <div class="project-hover-overlay">
-            <span class="project-name">Focal</span>
-            <div class="arrow-icon">→</div>
-          </div>
-        </NuxtLink>
-
         <!-- Focal Project -->
         <NuxtLink to="/subjects/invention" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
-               :style="{ backgroundImage: `url(/images/invention/invention_cover.png)` }">
+               :style="{ backgroundImage: `url(/images/invention/invention_cover2.png)` }">
               <span class="description-text">
                 ...we could <strong class="highlight-text">organize our digital chaos</strong> 
                 in three-dimensional space around us?
@@ -51,7 +31,7 @@
         <NuxtLink to="/subjects/interface" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
-               :style="{ backgroundImage: `url(/images/gardenhelper/gardenhelper_cover.png)` }">
+               :style="{ backgroundImage: `url(/images/gardenhelper/gardenhelper_cover2.png)` }">
               <span class="description-text">
                 ...keeping plants alive was as <strong class="highlight-text">simple as having 
                 a conversation</strong> with them?
@@ -68,32 +48,11 @@
           </div>
         </NuxtLink>
 
-        <!-- Animals Website Project -->
-        <NuxtLink to="/subjects/programming" class="project-card neo-card">
-          <div class="project-content">
-            <p class="project-description" 
-               :style="{ backgroundImage: `url(/images/animals/animals_cover.png)` }">
-              <span class="description-text">
-                ...children could <strong class="highlight-text">step into the wild</strong> 
-                and meet their favorite animals face to face?
-              </span>
-            </p>
-            <div class="project-meta">
-              <span class="project-type">Web Design</span>
-              <span class="project-year">2024</span>
-            </div>
-          </div>
-          <div class="project-hover-overlay">
-            <span class="project-name">Animal Explorer</span>
-            <div class="arrow-icon">→</div>
-          </div>
-        </NuxtLink>
-
         <!-- ICS Project -->
         <NuxtLink to="/subjects/ics" class="project-card neo-card">
           <div class="project-content">
             <p class="project-description" 
-               :style="{ backgroundImage: `url(/images/ics/ics_cover.png)` }">
+               :style="{ backgroundImage: `url(/images/ics/ics_cover3.png)` }">
               <span class="description-text">
                 ...complex data could <strong class="highlight-text">tell its own story</strong> 
                 through beautiful, intuitive visualizations?
@@ -105,7 +64,49 @@
             </div>
           </div>
           <div class="project-hover-overlay">
-            <span class="project-name">ICS Dashboard</span>
+            <span class="project-name">Exhibition: Nervous System</span>
+            <div class="arrow-icon">→</div>
+          </div>
+        </NuxtLink>
+
+        <!-- Programming Project -->
+        <NuxtLink to="/subjects/programming" class="project-card neo-card">
+          <div class="project-content">
+            <p class="project-description" 
+               :style="{ backgroundImage: `url(/images/programming/programming_cover3.png)` }">
+              <span class="description-text">
+                ...people could <strong class="highlight-text">explore their favourite animals</strong> 
+                in their natural habitats in virtual reality?
+              </span>
+            </p>
+            <div class="project-meta">
+              <span class="project-type">Programming III</span>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+          <div class="project-hover-overlay">
+            <span class="project-name">Animal Journey</span>
+            <div class="arrow-icon">→</div>
+          </div>
+        </NuxtLink>
+
+        <!-- ICS Project -->
+        <NuxtLink to="/subjects/dataset" class="project-card neo-card">
+          <div class="project-content">
+            <p class="project-description" 
+               :style="{ backgroundImage: `url(/images/dataset/dataset_cover3.png)` }">
+              <span class="description-text">
+                ...tornadoes <strong class="highlight-text">could be predicted and documented</strong> 
+                on a public platform?
+              </span>
+            </p>
+            <div class="project-meta">
+              <span class="project-type">Data Visualization</span>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+          <div class="project-hover-overlay">
+            <span class="project-name">Tornado Occurencies</span>
             <div class="arrow-icon">→</div>
           </div>
         </NuxtLink>
@@ -218,7 +219,7 @@
   z-index: 2;
 }
 
-.project-card:hover .description-text {
+/* .project-card:hover .description-text {
   background: transparent;
   color: transparent;
   background-clip: text;
@@ -228,7 +229,7 @@
   background-size: cover;
   background-position: center;
   text-shadow: none;
-}
+} */
 
 .highlight-text {
   color: var(--neo-accent-color);
@@ -236,10 +237,10 @@
   transition: all 0.4s ease;
 }
 
-.project-card:hover .highlight-text {
+/* .project-card:hover .highlight-text {
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .teal-text {
   color: var(--neo-accent-color);

@@ -7,9 +7,9 @@ const projectList = [
     next: 'iks'
   },
   {
-    id: 'iks',
+    id: 'ics',
     name: 'NERVOUS SYSTEM',
-    url: '/subjects/iks',
+    url: '/subjects/ics',
     next: 'interface'
   },
   {

@@ -28,20 +28,20 @@
                     description="Do you often lose track of your open apps while working on your laptop? Focal brings order to your digital workspace by allowing applications to be spatially arranged – directly on the walls around you." />
 
                 <ProjectCard title="NERVOUS SYSTEM" subtitle="INTERACTIVE COMMUNICATION"
-                    image="/images/ics/ics_cover2.png" url="/subjects/iks"
+                    image="/images/ics/ics_cover2.png" url="/subjects/ics"
                     description="An interactive exhibition piece that explores the connection between technology and human nervous systems." />
 
                 <ProjectCard title="GARDENHELPER" subtitle="INTERFACE DESIGN"
                     image="/images/interface/interface_cover.png" url="/subjects/interface"
                     description="Exploring new ways of communication through innovative design concepts and strategies." />
 
-                <ProjectCard title="PROGRAMMING" subtitle="ANIMAL JOURNEY"
-                    image="/images/programming/programming_cover.png" url="/subjects/invention"
-                    description="Interactive website that lets users explore their favourite animals in their natural habitat." />
-
                 <ProjectCard title="DATA VISUALIZATION" subtitle="TORNADO OCCURRENCE"
                     image="/images/dataset/datavis_cover.png" url="/subjects/datavset"
                     description="Data visualisation of Tornado Occurencies in the United States from 1950 until 2020." />
+                
+                <ProjectCard title="PROGRAMMING" subtitle="ANIMAL JOURNEY"
+                    image="/images/programming/programming_cover.png" url="/subjects/programming"
+                    description="Interactive website that lets users explore their favourite animals in their natural habitat." />
             </div>
         </section>
 
@@ -194,19 +194,19 @@
                                     <span>UX/UI Design</span>
                                 </div>
                                 <div class="skill-item">
-                                    <img src="/icons/icons/wireframes.png" alt="wireframing"class="skill-icon">
+                                    <img src="/icons/icons/wireframes.png" alt="wireframing" class="skill-icon">
                                     <span>Wireframing</span>
                                 </div>
                                 <div class="skill-item">
-                                    <img src="/icons/icons/prototyping.png" alt="prototyping"class="skill-icon">
+                                    <img src="/icons/icons/prototyping.png" alt="prototyping" class="skill-icon">
                                     <span>Prototyping</span>
                                 </div>
                                 <div class="skill-item">
-                                    <img src="/icons/icons/user_research.png" alt="user research"class="skill-icon">
+                                    <img src="/icons/icons/user_research.png" alt="user research" class="skill-icon">
                                     <span>User Research</span>
                                 </div>
                                 <div class="skill-item">
-                                    <img src="/icons/icons/visual_design.png" als="visual design"class="skill-icon">
+                                    <img src="/icons/icons/visual_design.png" als="visual design" class="skill-icon">
                                     <span>Visual Design</span>
                                 </div>
                             </div>
@@ -781,7 +781,8 @@ onMounted(() => {
         height: 16px;
         font-size: 0.9rem;
     }
-    .profile-picture{
+
+    .profile-picture {
         display: none;
     }
 }

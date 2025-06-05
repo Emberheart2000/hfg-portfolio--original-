@@ -24,6 +24,14 @@
             <h3 class="teal-text">Tools</h3>
             <p>Arduino IDE, 3D Printing, Beamer Projection</p>
           </div>
+          <div class="info-item">
+            <h3 class="teal-text">Team</h3>
+            <div>
+              <GroupMemberTag group-link="https://www.linkedin.com/in/jannik-fauser/" label="Jannik" />
+              <GroupMemberTag group-link="timon.design" label="Timon" />
+              <GroupMemberTag group-link="https://www.linkedin.com/in/cecilia-fassina-b91a1a351/" label="Cecilia" />
+            </div>
+          </div>
         </div>
         
         <div class="project-description">
@@ -49,10 +57,10 @@
           
           <div class="project-gallery">
             <div class="gallery-item neo-card">
-              <img src="/images/ics/ics_cover.png" alt="Process Image 1">
+              <img src="/images/ics/temperatureb1.png" alt="Process Image 1">
             </div>
             <div class="gallery-item neo-card">
-              <img src="/images/ics/ics_cover.png" alt="Process Image 2">
+              <img src="/images/ics/temperatureb3.png" alt="Process Image 2">
             </div>
           </div>
           

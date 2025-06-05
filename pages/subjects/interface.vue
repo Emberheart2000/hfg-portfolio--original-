@@ -62,10 +62,10 @@
 
           <div class="project-gallery">
             <div class="gallery-item neo-card">
-              <img src="/images/interface/interface_cover.png" alt="Market Analysis">
+              <img src="/images/interface/gardenhelper_mockup.png" alt="Market Analysis">
             </div>
             <div class="gallery-item neo-card">
-              <img src="/images/interface/interface_cover.png" alt="Price Research">
+              <img src="/images/interface/gardenhelper_mockup2.png" alt="Price Research">
             </div>
           </div>
 
@@ -99,10 +99,10 @@
 
           <div class="project-gallery">
             <div class="gallery-item neo-card">
-              <img src="/images/interface/interface_cover.png" alt="Screen Interface Design">
+              <img src="/images/interface/prototype_interface.jpg" alt="Screen Interface Design">
             </div>
             <div class="gallery-item neo-card">
-              <img src="/images/interface/interface_cover.png" alt="Smart Sensor Shovel">
+              <img src="/images/interface/prototype_device.png" alt="Smart Sensor Shovel">
             </div>
           </div>
 
@@ -154,11 +154,6 @@
               we designed a charging station concept with an integrated small solar panel. This ensures the device operates 
               in an environmentally friendly manner while supporting sustainable plant care practices.
             </p>
-
-            <div class="future-concept neo-card">
-              <img src="/images/interface/interface_cover.png" alt="Solar Charging Station Concept">
-              <p class="concept-caption">Sustainable charging station concept with integrated solar panel</p>
-            </div>
           </div>
 
           <div class="neo-separator"></div>
