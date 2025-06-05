@@ -35,11 +35,11 @@
                     image="/images/interface/interface_cover.png" url="/subjects/interface"
                     description="Exploring new ways of communication through innovative design concepts and strategies." />
 
-                <ProjectCard title="DATA VISUALIZATION" subtitle="TORNADO OCCURRENCE"
+                <ProjectCard title="TORNADO OCCURRENCES" subtitle="DATA VISUALIZATION"
                     image="/images/dataset/datavis_cover.png" url="/subjects/datavset"
                     description="Data visualisation of Tornado Occurencies in the United States from 1950 until 2020." />
                 
-                <ProjectCard title="PROGRAMMING" subtitle="ANIMAL JOURNEY"
+                <ProjectCard title="ANIMAL JOURNEY" subtitle="PROGRAMMING"
                     image="/images/programming/programming_cover.png" url="/subjects/programming"
                     description="Interactive website that lets users explore their favourite animals in their natural habitat." />
             </div>
